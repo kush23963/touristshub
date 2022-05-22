@@ -39,8 +39,9 @@ app.locals.moment = require('moment');
 // seedDB(); //seed the database
 
 // PASSPORT CONFIGURATION
+const secret = process.env.SECREt || 'Once again kush wins cutest boy!';
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret,
     resave: false,
     saveUninitialized: false
 }));
