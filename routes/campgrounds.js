@@ -19,7 +19,8 @@ router.get("/",async function(req, res){
          if(err){
             console.log(err);
          } else {
-            await res.status(200).json(allCampgrounds);
+           var db =  json(allCampgrounds);
+            res.status(200).db;
          }
       });
   } else {
