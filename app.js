@@ -14,7 +14,7 @@ var express     = require("express"),
     methodOverride = require("method-override");
 
 // configure dotenv
-require('dotenv').config();
+require('dotenv').load();
 
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
