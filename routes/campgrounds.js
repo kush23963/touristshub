@@ -11,7 +11,7 @@ function escapeRegex(text) {
 };
 
 //INDEX - show all campgrounds
-router.get("/", function(req, res){
+router.get("/",async function(req, res){
   if(req.query.search && req.xhr) {
       const regex = new RegExp(escapeRegex(req.query.search), 'gi');
       // Get all campgrounds from DB
@@ -19,7 +19,7 @@ router.get("/", function(req, res){
          if(err){
             console.log(err);
          } else {
-            res.status(200).json(allCampgrounds);
+            await res.status(200).json(allCampgrounds);
          }
       });
   } else {
