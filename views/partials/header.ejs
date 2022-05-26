@@ -17,6 +17,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
               </button>
 
               <a class="navbar-brand" href="/">TouristsHub</a>
@@ -24,6 +25,7 @@
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Campground</a></li>
+              <li id="about" class="<%= typeof page !== 'undefined' && page === 'about' ? 'active' : '' %>"><a class="nav-link" href="/about">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <% if(!currentUser){ %>
